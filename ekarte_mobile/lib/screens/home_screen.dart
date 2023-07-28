@@ -1,3 +1,4 @@
+import 'package:ekarte_mobile/screens/ticket_view.dart';
 import 'package:ekarte_mobile/utils/app_styles.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
@@ -63,13 +64,31 @@ class HomeScreen extends StatelessWidget {
                     )
                   ],
                 ),
+              ),
+              const Gap(40),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Upcoming Flights",
+                    style: Styles.headLineStyle2,
+                  ),
+                  InkWell(
+                    onTap: () => print("Tapped"),
+                    child: Text(
+                      "View all",
+                      style:
+                          Styles.textStyle.copyWith(color: Styles.primaryColor),
+                    ),
+                  )
+                ],
               )
             ],
           ),
-        )
+        ),
+        const Gap(15),
+        TicketView(),
       ]),
     );
   }
 }
-
-class FluentSystemIcon {}
