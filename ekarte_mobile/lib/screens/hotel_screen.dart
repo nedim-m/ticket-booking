@@ -10,10 +10,9 @@ class HotelScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = AppLayout.getSize(context);
     return Container(
-      width: size.width * 0.6,
-      height: 350,
+      width: AppLayout.getScreenWidth() * 0.6,
+      height: AppLayout.getHeight(350),
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 17),
       margin: const EdgeInsets.only(right: 17, top: 5),
       decoration: BoxDecoration(
