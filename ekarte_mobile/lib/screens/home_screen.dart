@@ -1,4 +1,4 @@
-import 'package:ekarte_mobile/screens/hotels_screen.dart';
+import 'package:ekarte_mobile/screens/hotel_screen.dart';
 import 'package:ekarte_mobile/screens/ticket_view.dart';
 import 'package:ekarte_mobile/utils/app_styles.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
@@ -92,14 +92,11 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           const Gap(15),
-          const SingleChildScrollView(
-            padding: EdgeInsets.only(left: 20),
+           SingleChildScrollView(
+            padding: const EdgeInsets.only(left: 20),
             scrollDirection: Axis.horizontal,
             child: Row(
-              children: [
-                TicketView(),
-                TicketView(),
-              ],
+              children: ticketList.map((singleTicket) => TicketView(ticket: singleTicket)).toList()
             ),
           ),
           const Gap(15),
