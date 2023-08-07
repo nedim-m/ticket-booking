@@ -82,7 +82,9 @@ class HomeScreen extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             child: Row(
                 children: ticketList
-                    .map((singleTicket) => TicketView(ticket: singleTicket))
+                    .map((singleTicket) => TicketView(
+                          ticket: singleTicket,
+                        ))
                     .toList()),
           ),
           const Gap(15),
