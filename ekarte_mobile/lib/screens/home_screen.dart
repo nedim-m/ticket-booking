@@ -1,15 +1,14 @@
+import 'package:flutter/material.dart';
 import 'package:ekarte_mobile/screens/hotel_screen.dart';
 import 'package:ekarte_mobile/screens/ticket_view.dart';
 import 'package:ekarte_mobile/utils/app_styles.dart';
 import 'package:ekarte_mobile/widgets/double_text_widget.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
-import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 
 import '../utils/app_info_list.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +20,7 @@ class HomeScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               children: [
-                const Gap(40),
+                const SizedBox(height: 40),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -32,7 +31,7 @@ class HomeScreen extends StatelessWidget {
                           "Good Morning",
                           style: Styles.headLineStyle3,
                         ),
-                        const Gap(5),
+                        const SizedBox(height: 5),
                         Text(
                           "Book Tickets",
                           style: Styles.headLineStyle1,
@@ -52,7 +51,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                const Gap(25),
+                const SizedBox(height: 25),
                 Container(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
@@ -70,13 +69,13 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                const Gap(40),
+                const SizedBox(height: 40),
                 const AppDoubleTextWidget(
                     bigText: "Upcoming Flights", smallText: "View all"),
               ],
             ),
           ),
-          const Gap(15),
+          const SizedBox(height: 15),
           SingleChildScrollView(
             padding: const EdgeInsets.only(left: 20),
             scrollDirection: Axis.horizontal,
@@ -87,12 +86,12 @@ class HomeScreen extends StatelessWidget {
                         ))
                     .toList()),
           ),
-          const Gap(15),
+          const SizedBox(height: 15),
           Container(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: const AppDoubleTextWidget(
                   bigText: "Hotels", smallText: "View all")),
-          const Gap(15),
+          const SizedBox(height: 15),
           SingleChildScrollView(
             padding: const EdgeInsets.only(left: 20),
             scrollDirection: Axis.horizontal,

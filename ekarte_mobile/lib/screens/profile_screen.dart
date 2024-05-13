@@ -2,13 +2,12 @@ import 'package:ekarte_mobile/widgets/column_layout.dart';
 import 'package:ekarte_mobile/widgets/layout_builder_widget.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 
 import '../utils/app_layout.dart';
 import '../utils/app_styles.dart';
 
 class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
+  const ProfileScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +18,7 @@ class ProfileScreen extends StatelessWidget {
             horizontal: AppLayout.getHeight(20),
             vertical: AppLayout.getHeight(20)),
         children: [
-          Gap(AppLayout.getHeight(40)),
+          SizedBox(height: AppLayout.getHeight(40)),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -32,7 +31,7 @@ class ProfileScreen extends StatelessWidget {
                     image: const DecorationImage(
                         image: AssetImage("assets/images/img_1.png"))),
               ),
-              Gap(AppLayout.getWidth(10)),
+              SizedBox(width: AppLayout.getWidth(10)),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -41,7 +40,7 @@ class ProfileScreen extends StatelessWidget {
                     "Book Tickets",
                     style: Styles.headLineStyle1,
                   ),
-                  Gap(AppLayout.getWidth(2)),
+                  SizedBox(height: AppLayout.getWidth(2)),
                   Text(
                     "New York",
                     style: TextStyle(
@@ -49,7 +48,7 @@ class ProfileScreen extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                         color: Colors.grey.shade500),
                   ),
-                  Gap(AppLayout.getWidth(8)),
+                  SizedBox(height: AppLayout.getWidth(8)),
                   Container(
                     padding: EdgeInsets.symmetric(
                         horizontal: AppLayout.getHeight(3),
@@ -74,14 +73,14 @@ class ProfileScreen extends StatelessWidget {
                             size: AppLayout.getHeight(15),
                           ),
                         ),
-                        Gap(AppLayout.getWidth(5)),
+                        SizedBox(width: AppLayout.getWidth(5)),
                         const Text(
                           "Premium status",
                           style: TextStyle(
                               color: Color(0xFF526799),
                               fontWeight: FontWeight.w600),
                         ),
-                        Gap(AppLayout.getWidth(5)),
+                        SizedBox(width: AppLayout.getWidth(5)),
                       ],
                     ),
                   ),
@@ -104,9 +103,9 @@ class ProfileScreen extends StatelessWidget {
               ),
             ],
           ),
-          Gap(AppLayout.getHeight(8)),
+          SizedBox(height: AppLayout.getHeight(8)),
           Divider(color: Colors.grey.shade300),
-          Gap(AppLayout.getHeight(8)),
+          SizedBox(height: AppLayout.getHeight(8)),
           Stack(
             children: [
               Container(
@@ -146,7 +145,7 @@ class ProfileScreen extends StatelessWidget {
                           color: Styles.primaryColor,
                           size: 27),
                     ),
-                    Gap(AppLayout.getHeight(12)),
+                    SizedBox(width: AppLayout.getHeight(12)),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -172,12 +171,12 @@ class ProfileScreen extends StatelessWidget {
               ),
             ],
           ),
-          Gap(AppLayout.getHeight(25)),
+          SizedBox(height: AppLayout.getHeight(25)),
           Text(
             "Accumulated miles",
             style: Styles.headLineStyle2,
           ),
-          Gap(AppLayout.getHeight(20)),
+          SizedBox(height: AppLayout.getHeight(20)),
           Container(
             padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(15)),
             decoration: BoxDecoration(
@@ -200,7 +199,7 @@ class ProfileScreen extends StatelessWidget {
                       color: Styles.textColor,
                       fontWeight: FontWeight.w600),
                 ),
-                Gap(AppLayout.getHeight(20)),
+                SizedBox(height: AppLayout.getHeight(20)),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -214,9 +213,9 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                Gap(AppLayout.getHeight(4)),
+                SizedBox(height: AppLayout.getHeight(4)),
                 Divider(color: Colors.grey.shade300),
-                Gap(AppLayout.getHeight(4)),
+                SizedBox(height: AppLayout.getHeight(4)),
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -234,12 +233,12 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                Gap(AppLayout.getHeight(12)),
+                SizedBox(height: AppLayout.getHeight(12)),
                 const AppLayoutBuilderWidget(
                   sections: 12,
                   isColor: false,
                 ),
-                Gap(AppLayout.getHeight(12)),
+                SizedBox(height: AppLayout.getHeight(12)),
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -257,12 +256,12 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                Gap(AppLayout.getHeight(12)),
+                SizedBox(height: AppLayout.getHeight(12)),
                 const AppLayoutBuilderWidget(
                   sections: 12,
                   isColor: false,
                 ),
-                Gap(AppLayout.getHeight(12)),
+                SizedBox(height: AppLayout.getHeight(12)),
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -283,7 +282,7 @@ class ProfileScreen extends StatelessWidget {
               ],
             ),
           ),
-          Gap(AppLayout.getHeight(25)),
+          SizedBox(height: AppLayout.getHeight(25)),
           Center(
             child: Text(
               "How to get more miles",

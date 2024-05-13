@@ -1,14 +1,14 @@
+import 'package:flutter/material.dart';
+
 import 'package:ekarte_mobile/utils/app_layout.dart';
 import 'package:ekarte_mobile/widgets/icon_text_widget.dart';
-import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
+import 'package:ekarte_mobile/widgets/double_text_widget.dart';
+import 'package:ekarte_mobile/widgets/tickets_tab.dart';
 
 import '../utils/app_styles.dart';
-import '../widgets/double_text_widget.dart';
-import '../widgets/tickets_tab.dart';
 
 class SearchScreen extends StatelessWidget {
-  const SearchScreen({super.key});
+  const SearchScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,19 +20,19 @@ class SearchScreen extends StatelessWidget {
             horizontal: AppLayout.getWidth(20),
             vertical: AppLayout.getHeight(20)),
         children: [
-          Gap(AppLayout.getHeight(40)),
+          SizedBox(height: AppLayout.getHeight(40)),
           Text(
             "What are\nyou looking for?",
             style: Styles.headLineStyle1.copyWith(fontSize: 35),
           ),
-          Gap(AppLayout.getHeight(20)),
+          SizedBox(height: AppLayout.getHeight(20)),
           const AppTicketTabs(leftText: "Airline tickets", rightText: "Hotels"),
-          Gap(AppLayout.getHeight(25)),
+          SizedBox(height: AppLayout.getHeight(25)),
           const AppIconText(
               icon: Icons.flight_takeoff_rounded, text: "Departure"),
-          Gap(AppLayout.getHeight(20)),
+          SizedBox(height: AppLayout.getHeight(20)),
           const AppIconText(icon: Icons.flight_land_rounded, text: "Arival"),
-          Gap(AppLayout.getHeight(25)),
+          SizedBox(height: AppLayout.getHeight(25)),
           Container(
             padding: EdgeInsets.symmetric(
                 vertical: AppLayout.getWidth(18),
@@ -52,15 +52,15 @@ class SearchScreen extends StatelessWidget {
               ),
             ),
           ),
-          Gap(AppLayout.getHeight(40)),
+          SizedBox(height: AppLayout.getHeight(40)),
           const AppDoubleTextWidget(
               bigText: "Upcoming Flights", smallText: "View all"),
-          Gap(AppLayout.getHeight(25)),
+          SizedBox(height: AppLayout.getHeight(25)),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                height: AppLayout.getHeight(400),
+                height: null,
                 width: size.width * 0.42,
                 padding: EdgeInsets.symmetric(
                     vertical: AppLayout.getHeight(12),
@@ -88,7 +88,7 @@ class SearchScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Gap(AppLayout.getHeight(12)),
+                  SizedBox(height: AppLayout.getHeight(12)),
                   Text(
                       "20% discount on the early booking of this fligth. Don't miss out this chance",
                       style: Styles.headLineStyle2),
@@ -100,7 +100,7 @@ class SearchScreen extends StatelessWidget {
                     children: [
                       Container(
                         width: size.width * 0.44,
-                        height: AppLayout.getHeight(200),
+                        height: null,
                         decoration: BoxDecoration(
                             color: const Color(0xFF3AB8B8),
                             borderRadius:
@@ -117,7 +117,7 @@ class SearchScreen extends StatelessWidget {
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white),
                               ),
-                              Gap(AppLayout.getHeight(10)),
+                              SizedBox(height: AppLayout.getHeight(10)),
                               Text(
                                 "Take the survey about our services and and get discount",
                                 style: Styles.headLineStyle2.copyWith(
@@ -142,7 +142,7 @@ class SearchScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  Gap(AppLayout.getHeight(10)),
+                  SizedBox(height: AppLayout.getHeight(10)),
                   Container(
                     width: size.width * 0.44,
                     height: AppLayout.getHeight(190),
@@ -160,7 +160,7 @@ class SearchScreen extends StatelessWidget {
                             color: Colors.white, fontWeight: FontWeight.bold),
                         textAlign: TextAlign.center,
                       ),
-                      Gap(AppLayout.getHeight(5)),
+                      SizedBox(height: AppLayout.getHeight(5)),
                       RichText(
                         text: const TextSpan(
                           children: [

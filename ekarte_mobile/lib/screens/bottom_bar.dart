@@ -1,5 +1,5 @@
 import 'package:ekarte_mobile/screens/home_screen.dart';
-import 'package:ekarte_mobile/screens/profile_scree.dart';
+import 'package:ekarte_mobile/screens/profile_screen.dart';
 import 'package:ekarte_mobile/screens/search_screen.dart';
 import 'package:ekarte_mobile/screens/ticket_screen.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
